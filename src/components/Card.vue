@@ -1,19 +1,25 @@
+
+<template>
+    <div class="flex flex-col overflow-hidden rounded-xl shadow-xl">
+        <div>
+            <img :src="character.image" alt="">
+        </div>
+        <div class="p3">
+            <h3 class="text-2xl text-center">{{ character.name }}</h3>
+        </div>
+    </div>
+</template>
+
 <script setup>
 import  { defineProps } from 'vue';
 
     const props = defineProps({
-        character: []
+       character:{
+        requiered:true,
+        type: Object
+    }
+        
+         
     })
-    console.log(character.value.name)
+  
 </script>
-
-<template>
-    <div>
-        <div>
-            <img src="" alt="">
-        </div>
-        <div>
-            <h3>nombre</h3>
-        </div>
-    </div>
-</template>
